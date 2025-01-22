@@ -7,9 +7,9 @@ public class Client {
     private String accountNum;
     private String name;
     private String surname;
-    private String nationality;
-    private String phone;
-    private String dni = "NOT_PROVIDED";
+    private String nationality = "ES";
+    private String phone = "NOT_PROVIDED";
+    private String dni;
     private byte age = 18;
     private float debts = 0;
     private boolean active = true;
@@ -27,11 +27,11 @@ public class Client {
         this.age = age;
     }
 
-    public Client(String accountNum, String name, String surname, String nationality) {
+    public Client(String accountNum, String name, String surname, String dni) {
         this.accountNum = accountNum;
         this.name = name;
         this.surname = surname;
-        this.nationality = nationality;
+        this.dni = dni;
     }
 
 
