@@ -65,12 +65,12 @@ public class ClientMain {
         // Test getters and setter setDebt & getDebt
         System.out.println("\nTest getters and setter setDebt & getDebt");
         client2.setDebts(3000.120f);
-        System.out.println("Client2 debt:          " + client2.getDebts());
+        System.out.println("Client2 debt:               " + client2.getDebts());
 
         // Test isActive and setActive
         System.out.println("\nTest isActive and setActive");
         client1.setActive(false);
-        System.out.println("Client1 active:          " + client1.isActive());
+        System.out.println("Client1 active:             " + client1.isActive());
 
         // Test toString
         System.out.println("\nTest toString");
@@ -78,10 +78,30 @@ public class ClientMain {
         System.out.println(client2);
 
         // Test cancelDebts
+        System.out.println("\nTest cancelDebts");
         // Test reduceDebt with amount = 50 (set initial debt to 120.25), result = true, debt = 70.25
+        client1.setDebts(120.25f);
+        System.out.println("Reduce debts by 50: " + client1.reduceDebts(50));
+        System.out.println("Debt after reduce: " + client1.getDebts());
+
         // Test reduceDebt with amount = 150 (set initial debt to 120.25), result = true, debt = 0
+        client1.setDebts(120.25f);
+        System.out.println("Reduce debts by 150: " + client1.reduceDebts(150));
+        System.out.println("Debt after reduce: " + client1.getDebts());
+
         // Test reduceDebt with amount = -100 (set initial debt to 120.25), result = false, debt = 120.25
+        client1.setDebts(120.25f);
+        System.out.println("Reduce debts by -100: " + client1.reduceDebts(-100));
+        System.out.println("Debt after reduce: " + client1.getDebts());
+
         // Test increaseDebt with amount = 50 (set initial debt to 120.25), result = true, debt = 170.25
+        client1.setDebts(120.25f);
+        System.out.println("Increase debts by 50: " + client1.increaseDebts(50));
+        System.out.println("Debt after increase: " + client1.getDebts());
+
         // Test increaseDebt with amount = -50 (set initial debt to 120.25), result = false, debt = 120.25
+        client1.setDebts(120.25f);
+        System.out.println("Increase debts by -50: " + client1.increaseDebts(-50));
+        System.out.println("Debt after increase: " + client1.getDebts());
     }
 }
