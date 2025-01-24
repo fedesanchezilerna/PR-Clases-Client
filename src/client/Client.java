@@ -7,10 +7,10 @@ public class Client {
     private String accountNum;
     private String name;
     private String surname;
-    private String nationality = "ES";
-    private String phone = "NOT_PROVIDED";
+    private String nationality;
+    private String phone;
     private String dni;
-    private byte age = 18;
+    private byte age;
     private float debts = 0;
     private boolean active = true;
 
@@ -32,6 +32,11 @@ public class Client {
         this.name = name;
         this.surname = surname;
         this.dni = dni;
+
+        // Default attributes
+        this.nationality = "ES";
+        this.phone = "NOT_PROVIDED";
+        this.age = 18;
     }
 
 
